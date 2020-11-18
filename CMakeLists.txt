@@ -4,7 +4,15 @@ set(PROJECT_NAME EducationGame)
 
 project(${PROJECT_NAME})
 
-add_executable(${PROJECT_NAME} source/main.cpp)
+set(CMAKE_CXX_STANDART 19)
+
+add_executable(${PROJECT_NAME}
+	source/main.cpp
+	source/Renderer/ShaderProgram.cpp
+	source/Renderer/ShaderProgram.h
+	)
+
+
 
 set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
