@@ -22,7 +22,7 @@ namespace Renderer {
 		ShaderProgram(ShaderProgram&& shaderProgram) noexcept;
 
 	private:
-		bool createShader(const std::string& source, const GLenum shaderType, GLuint& shaderID);
+		bool createShader(const string& source, const GLenum shaderType, GLuint& shaderID);
 		bool m_isComplited = false;
 		GLuint m_ID = 0;
 	};

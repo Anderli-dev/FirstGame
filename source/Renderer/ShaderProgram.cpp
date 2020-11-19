@@ -10,7 +10,7 @@ namespace Renderer {
 		GLuint vertexShaderID;
 
 		if (!createShader(vertexShader, GL_VERTEX_SHADER, vertexShaderID)) {
-			cerr<<"VERTEX SHADER Complite-time error:\n" << endl;
+			cerr << "VERTEX SHADER Complite-time error:\n" << endl;
 			return;
 		}
 
@@ -41,7 +41,7 @@ namespace Renderer {
 		glDeleteShader(vertexShaderID);
 		glDeleteShader(fragmentShaderID);
 	}
-	
+
 	bool ShaderProgram::createShader(const std::string& source, const GLenum shaderType, GLuint& shaderID)
 	{
 		shaderID = glCreateShader(shaderType);
@@ -68,7 +68,7 @@ namespace Renderer {
 		glUseProgram(m_ID);
 	}
 
-	ShaderProgram& ShaderProgram::operator=(ShaderProgram&& shaderProgram) noexcept{
+	ShaderProgram& ShaderProgram::operator=(ShaderProgram&& shaderProgram) noexcept {
 
 		glDeleteProgram(m_ID);
 		m_ID = shaderProgram.m_ID;
